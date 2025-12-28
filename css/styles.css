@@ -23,6 +23,10 @@ h2 {
   margin: 0;
 }
 
+a {
+  color: transparent;
+}
+
 /* HEADER STYLE --------------------------------------------------------------------------------------- */
 header {
   display: flex;
@@ -100,6 +104,11 @@ li > a:active {
   padding: 10px;
 }
 
+.container-header-buttons {
+  display: flex;
+  align-items: center;
+}
+
 .container-header-contacts-links {
   display: flex;
   align-items: center;
@@ -115,6 +124,16 @@ li > a:active {
 }
 
 .container-header-contacts-button {
+  padding: 10px 15px;
+  border: 1px solid var(--green);
+  border-radius: 4px;
+  background-color: var(--green);
+  cursor: pointer;
+  color: var(--white);
+  margin-right: 1rem;
+}
+
+.container-header-catalog-button {
   padding: 10px 15px;
   border: 1px solid var(--green);
   border-radius: 4px;
@@ -352,9 +371,8 @@ footer {
   .container-header-list li {
     font-size: 16px;
   }
-
   .container-header-contacts-button {
-    margin-right: 1rem;
+    margin-right: 0.5rem;
   }
 
   .container-header-dropdown.show {
@@ -363,6 +381,18 @@ footer {
 
   .container-header-contacts {
     border-top: 1px solid #ddd;
+  }
+
+  .container-header-dropdown:not(.show) {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  .container-header-contacts-button,
+  .container-header-catalog-button {
+    font-size: 0.75rem;
+    padding: 8px 10px;
   }
 
   .container-header-dropdown:not(.show) {
@@ -470,7 +500,7 @@ footer {
   }
 
   .container-header-contacts-button {
-    margin-right: 1rem;
+    margin-right: 0.5rem;
   }
 
   .container-header-dropdown.show {
@@ -485,6 +515,12 @@ footer {
     max-height: 0;
     opacity: 0;
     transform: translateY(-10px);
+  }
+
+  .container-header-contacts-button,
+  .container-header-catalog-button {
+    font-size: 0.75rem;
+    padding: 8px 10px;
   }
 
   /* MAIN */
@@ -589,6 +625,7 @@ footer {
 
   .container-header-contacts {
     justify-content: flex-end;
+    padding: 4px;
   }
 
   .container-header-menu-button {
@@ -602,6 +639,12 @@ footer {
   }
 
   .container-header-contacts-button {
+    padding: 8px 12px;
+    height: auto;
+    margin-right: 4px;
+  }
+
+  .container-header-catalog-button {
     padding: 8px 12px;
     height: auto;
   }
@@ -712,7 +755,8 @@ footer {
     width: 100%;
   }
 
-  .container-header-contacts-button {
+  .container-header-contacts-button,
+  .container-header-catalog-button {
     padding: 12px 17px;
   }
 
